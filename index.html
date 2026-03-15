@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T-GEAR 동아리 홈페이지</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">T-GEAR</div>
+    <nav class="main-nav">
+      <a href="#home" class="nav-link active">홈</a>
+      <a href="#about" class="nav-link">소개</a>
+      <a href="#notice" class="nav-link">공지사항</a>      <a href="#activity" class="nav-link">활동</a>      <a href="#contact" class="nav-link">문의</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <h1>환영합니다, T-GEAR 동아리 홈페이지</h1>
+      <p>여기는 우리 동아리 활동과 공지, 프로젝트를 한눈에 보는 공간입니다.</p>
+      <div class="hero-actions">
+        <button id="go-notice">최근 공지 보기</button>
+      </div>
+    </section>
+
+    <section id="about" class="content-section">
+      <h2>동아리 소개</h2>
+      <p>우리 T-GEAR는 개발과 디자인을 함께하는 동아리입니다. 매주 스터디와 프로젝트를 진행합니다.</p>
+    </section>
+
+    <section id="recent-notice" class="content-section">
+      <div class="section-heading-row">
+        <h2>최근 공지</h2>
+        <a href="#notice" class="small-link">전체 공지 보기</a>
+      </div>
+      <div id="recent-list" class="notice-list"></div>
+    </section>
+
+    <section id="notice" class="content-section">
+      <h2>공지사항</h2>
+      <p>동아리 공지는 아래 목록에서 확인하세요.</p>
+      <div id="all-notice" class="notice-list"></div>
+    </section>
+
+    <section id="activity" class="content-section">
+      <div class="section-heading-row">
+        <h2>활동 기록</h2>
+        <span class="small-link">최근 활동을 공유합니다</span>
+      </div>
+      <form id="activity-form" class="activity-form">
+        <label>
+          제목
+          <input id="activity-title" type="text" placeholder="활동 제목을 입력하세요" required />
+        </label>
+        <label>
+          기록
+          <textarea id="activity-content" rows="3" placeholder="활동 내용을 적어 주세요" required></textarea>
+        </label>
+        <label>
+          이미지 업로드 (선택)
+          <input id="activity-image" type="file" accept="image/*" />
+        </label>
+        <button type="submit">기록 추가</button>
+      </form>
+      <div id="activity-list" class="notice-list"></div>
+    </section>
+
+    <section id="contact" class="content-section">
+      <h2>문의하기</h2>
+      <p>동아리 가입문의는 이메일로 연락 주세요.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 T-GEAR. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
